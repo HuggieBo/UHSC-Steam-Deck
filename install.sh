@@ -17,5 +17,5 @@ wget --output-document=UHSC.tar.gz  ${URL}
 tar -xf UHSC.tar.gz --directory=UHSC || exit
 cd UHSC/* || exit
 sed -i '7s/.*/  module.export = require(`..\/build\/Release\/sharp-linux-x64.node`);/' resources/app.asar.unpacked/node_modules/sharp/lib/sharp.js
-
+mv */* ./
 
